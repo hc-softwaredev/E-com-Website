@@ -1,0 +1,49 @@
+nav ul {
+    display: flex;
+    justify-content: center; /* Center mein lane ke liye */
+    gap: 30px;               /* Links ke beech 30px ka gap dene ke liye */
+    list-style: none;
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;          /* Ekdum white color */
+    text-decoration: none;   /* Underline hatane ke liye */
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+nav ul li a:hover {
+    color: #ff9900;          /* Mouse le jaane par orange color (Professional feel!) */
+}
+.product-card {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Corners ko round karne ke liye */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow se professional look aata hai */
+    transition: 0.3s; /* Hover effect ke liye */
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Mouse le jane par card utha hua dikhega */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+/* Links ko white aur saaf dikhane ke liye */
+nav ul li a {
+    color: #ffffff !important; /* Force white color */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Jab mouse link pe jaye */
+nav ul li a:hover {
+    color: #ffcc00 !important; /* Gold color on hover */
+}
