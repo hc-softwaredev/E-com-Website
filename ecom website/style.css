@@ -1,56 +1,101 @@
-nav ul {
-    display: flex;
-    justify-content: center; /* Center mein lane ke liye */
-    gap: 30px;               /* Links ke beech 30px ka gap dene ke liye */
-    list-style: none;
-    background-color: #333;
-    padding: 20px;
+/* General Reset */
+body {
     margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
-nav ul li a {
-    color: #ffffff;          /* Ekdum white color */
-    text-decoration: none;   /* Underline hatane ke liye */
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Corrected from background-attachment */
+    color: #ffffff;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
     font-size: 18px;
-    font-family: Arial, sans-serif;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ff9900;          /* Mouse le jaane par orange color (Professional feel!) */
+.nav-links li a:hover {
+    color: #ffcc00 !important; /* Gold/Orange professional hover */
 }
+
+/* --- Product Grid Container --- */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+/* --- Product Card Styling --- */
 .product-card {
-    width: 250px;
+    background: #ffffff;
+    border-radius: 12px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Corners ko round karne ke liye */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow se professional look aata hai */
-    transition: 0.3s; /* Hover effect ke liye */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ddd;
 }
 
 .product-card:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Mouse le jane par card utha hua dikhega */
+    transform: translateY(-10px); /* Mouse le jane par card utha hua dikhega */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 5px;
-}
-/* Links ko white aur saaf dikhane ke liye */
-nav ul li a {
-    color: #ffffff !important; /* Force white color */
-    text-decoration: none;
-    font-family: 'Arial', sans-serif;
+    height: 200px;
+    object-fit: cover; /* Image dabba mein fit hogi bina stretch hue */
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Jab mouse link pe jaye */
-nav ul li a:hover {
-    color: #ffcc00 !important; /* Gold color on hover */
-}
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-    padding: 20px;
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
 }
 
+.product-card p {
+    color: #777;
+    font-weight: bold;
+}
+
+/* --- Footer Section --- */
+.footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
